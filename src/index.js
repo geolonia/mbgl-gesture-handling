@@ -35,10 +35,10 @@ class GestureHandling {
     const container = map.getContainer();
     const rect = container.getBoundingClientRect();
 
-    this.alertBox.style.top = rect.top + 'px';
-    this.alertBox.style.left = rect.left + 'px';
-    this.alertBox.style.width = rect.width + 'px';
-    this.alertBox.style.height = rect.height + 'px';
+    this.alertBox.style.top = `${rect.top}px`;
+    this.alertBox.style.left = `$rect.left}px`;
+    this.alertBox.style.width = `$rect.width}px`;
+    this.alertBox.style.height = `$rect.height}px`;
 
     document.addEventListener('wheel', (event) => {
       if (event.altKey) {
