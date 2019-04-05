@@ -41,7 +41,7 @@ class GestureHandling {
     this.alertBox.style.width = `${rect.width}px`;
     this.alertBox.style.height = `${rect.height}px`;
 
-    document.addEventListener('wheel', (event) => {
+    container.addEventListener('wheel', (event) => {
       if (event.altKey) {
         map.scrollZoom.enable();
       } else {
@@ -52,8 +52,6 @@ class GestureHandling {
         this.alertBox.style.display = 'none';
         map.scrollZoom.disable();
       }, this.settings.timeout);
-
-      event.preventDefault();
     })
   }
 }
