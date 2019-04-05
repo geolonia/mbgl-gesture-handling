@@ -5,15 +5,16 @@ class GestureHandling {
     const defaults = {
       backgroundColor: 'rgba(0, 0, 0, 0.8)',
       textColor: '#ffffff',
-      textMessage: 'Use [alt] + scroll to zoom the map.'
+      textMessage: 'Use [alt] + scroll to zoom the map.',
+      timeout: 2000,
     };
 
-    const settings = {
+    this.settings = {
       ...defaults, ...options
     }
 
     this.alertBox = document.createElement('div');
-    this.alertBox.style.backgroundColor = settings.backgroundColor;
+    this.alertBox.style.backgroundColor = this.settings.backgroundColor;
     this.alertBox.style.position = 'absolute';
     this.alertBox.style.display = 'none';
     this.alertBox.style.zIndex = 9999;
@@ -22,8 +23,8 @@ class GestureHandling {
 
     const textBox = document.createElement('div');
     textBox.style.textAlign = 'center';
-    textBox.style.color = settings.textColor;
-    textBox.innerText = settings.textMessage;
+    textBox.style.color = this.settings.textColor;
+    textBox.innerText = this.settings.textMessage;
 
     this.alertBox.appendChild(textBox);
     document.body.appendChild(this.alertBox);
@@ -50,7 +51,7 @@ class GestureHandling {
       setTimeout(() => {
         this.alertBox.style.display = 'none';
         map.scrollZoom.disable();
-      }, 1000);
+      }, this.settings.timeout);
 
       event.preventDefault();
     })
