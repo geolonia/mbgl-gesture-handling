@@ -1,5 +1,5 @@
 {
-  "name": "mbgl-gesturehandling",
+  "name": "@tilecloud/mbgl-gesture-handling",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
