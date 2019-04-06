@@ -47,3 +47,21 @@ const options = {
 
 new GestureHandling(options).addTo(map);
 ```
+
+## Contributing
+
+```bash
+$ git clone git@github.com:tilecloud/mbgl-gesture-handling.git
+$ cd mbgl-gesture-handling
+$ npm install
+$ npm test
+$ npm run build
+```
+
+Developers note:
+
+To publish this module:
+
+```
+$ npm run build && npm publish
+```
