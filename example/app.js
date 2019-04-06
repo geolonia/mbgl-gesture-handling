@@ -38,6 +38,8 @@ map2.addControl(new ForkMeConntrol({
   url: 'https://github.com/tilecloud/mbgl-gesture-handling',
 }));
 
-new GestureHandling().addTo(map2);
+new GestureHandling({
+  textMessage: "Altを押してね"
+}).addTo(map2);
 
 

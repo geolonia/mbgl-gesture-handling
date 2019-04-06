@@ -4,16 +4,13 @@ let timer;
 
 class GestureHandling {
   constructor(options) {
-    const defaults = {
+    this.settings = {
       backgroundColor: 'rgba(0, 0, 0, 0.8)',
       textColor: '#ffffff',
       textMessage: 'Use alt + scroll to zoom the map.',
       timeout: 100,
+      ...options
     };
-
-    this.settings = {
-      ...defaults, ...options
-    }
 
     this.alertBox = document.createElement('div');
     this.alertBox.style.backgroundColor = this.settings.backgroundColor;
@@ -35,8 +32,7 @@ class GestureHandling {
   addTo(map) {
     map.scrollZoom.disable();
 
-    const container = map.getContainer();
-    const rect = container.getBoundingClientRect();
+    const rect = map.getContainer().getBoundingClientRect();
 
     this.alertBox.style.top = `${rect.top + window.scrollY}px`;
     this.alertBox.style.left = `${rect.left + window.scrollX}px`;
@@ -52,7 +48,7 @@ class GestureHandling {
       }, this.settings.timeout);
     });
 
-    container.addEventListener('wheel', (event) => {
+    map.getContainer().addEventListener('wheel', (event) => {
       if (event.altKey) {
         this.alertBox.style.display = 'none';
         map.scrollZoom.enable();
