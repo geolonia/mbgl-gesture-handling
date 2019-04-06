@@ -1,10 +1,9 @@
 "use strict"
 
-let timer;
-
 class GestureHandling {
   constructor(options) {
     this.id = 'mbgl-gesture-handling-help';
+    this.timer = null;
 
     this.settings = {
       backgroundColor: 'rgba(0, 0, 0, 0.8)',
@@ -48,18 +47,22 @@ class GestureHandling {
     this.helpElement.querySelector('div').innerText = message;
   }
 
+  hideHelp() {
+    this.helpElement.style.display = 'none';
+  }
+
   addTo(map) {
     map.scrollZoom.disable();
 
     this.helpElement.addEventListener('wheel', (event) => {
       if (event.altKey) {
-        this.helpElement.style.display = 'none';
-        event.preventDefault()
+        this.hideHelp();
+        event.preventDefault();
       } else {
-        clearTimeout(timer);
+        clearTimeout(this.timer);
 
-        timer = setTimeout(() => {
-          this.helpElement.style.display = 'none';
+        this.timer = setTimeout(() => {
+          this.hideHelp();
           map.scrollZoom.disable();
         }, this.settings.timeout);
       }
@@ -73,13 +76,22 @@ class GestureHandling {
       }
     });
 
+    this.helpElement.addEventListener('touchstart', (event) => {
+      if (event.touches && 2 <= event.touches.length) {
+        clearTimeout(this.timer);
+        this.hideHelp();
+        map.dragPan.enable();
+        event.preventDefault();
+      }
+    });
+
     map.on('movestart', (event) => {
       if (event.originalEvent && 'touches' in event.originalEvent && 2 > event.originalEvent.touches.length) {
         this.showHelp(map, this.settings.textMessageMobile);
         map.dragPan.disable();
-        timer = setTimeout(() => {
+        this.timer = setTimeout(() => {
           map.dragPan.enable();
-          this.helpElement.style.display = 'none';
+          this.hideHelp();
         }, this.settings.timeout);
       }
     });

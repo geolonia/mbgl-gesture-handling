@@ -11,6 +11,10 @@
     "build:site": "rm -fr docs && parcel build -d docs example/index.html --public-url '.' && touch docs/.nojekyll",
     "test": "eslint \"src/**/*.js\""
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tilecloud/mbgl-gesture-handling.git"
+  },
   "author": "tilecloud.io",
   "license": "MIT",
   "devDependencies": {
