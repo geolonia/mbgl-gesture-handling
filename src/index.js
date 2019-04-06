@@ -1,6 +1,6 @@
 "use strict"
 
-var timer;
+let timer;
 
 class GestureHandling {
   constructor(options) {
