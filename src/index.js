@@ -32,13 +32,6 @@ class GestureHandling {
   addTo(map) {
     map.scrollZoom.disable();
 
-    const rect = map.getContainer().getBoundingClientRect();
-
-    this.alertBox.style.top = `${rect.top + window.scrollY}px`;
-    this.alertBox.style.left = `${rect.left + window.scrollX}px`;
-    this.alertBox.style.width = `${rect.width}px`;
-    this.alertBox.style.height = `${rect.height}px`;
-
     this.alertBox.addEventListener('wheel', () => {
       clearTimeout(timer);
 
@@ -53,6 +46,11 @@ class GestureHandling {
         this.alertBox.style.display = 'none';
         map.scrollZoom.enable();
       } else {
+        const rect = map.getContainer().getBoundingClientRect();
+        this.alertBox.style.top = `${rect.top + window.scrollY}px`;
+        this.alertBox.style.left = `${rect.left + window.scrollX}px`;
+        this.alertBox.style.width = `${rect.width}px`;
+        this.alertBox.style.height = `${rect.height}px`;
         this.alertBox.style.display = 'flex';
       }
     })
