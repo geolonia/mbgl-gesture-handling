@@ -1,6 +1,6 @@
 "use strict"
 
-let timer;
+var timer;
 
 class GestureHandling {
   constructor(options) {
@@ -8,7 +8,7 @@ class GestureHandling {
       backgroundColor: 'rgba(0, 0, 0, 0.8)',
       textColor: '#ffffff',
       textMessage: 'Use alt + scroll to zoom the map.',
-      timeout: 2000,
+      timeout: 100,
     };
 
     this.settings = {
@@ -43,6 +43,15 @@ class GestureHandling {
     this.alertBox.style.width = `${rect.width}px`;
     this.alertBox.style.height = `${rect.height}px`;
 
+    this.alertBox.addEventListener('wheel', () => {
+      clearTimeout(timer);
+
+      timer = setTimeout(() => {
+        this.alertBox.style.display = 'none';
+        map.scrollZoom.disable();
+      }, this.settings.timeout);
+    });
+
     container.addEventListener('wheel', (event) => {
       if (event.altKey) {
         this.alertBox.style.display = 'none';
@@ -50,12 +59,6 @@ class GestureHandling {
       } else {
         this.alertBox.style.display = 'flex';
       }
-
-      clearTimeout(timer); // Stop timer until scrolling.
-      timer = setTimeout(() => {
-        this.alertBox.style.display = 'none';
-        map.scrollZoom.disable();
-      }, this.settings.timeout);
     })
   }
 }
