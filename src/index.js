@@ -51,7 +51,7 @@ class GestureHandling {
         this.alertBox.style.display = 'flex';
       }
 
-      clearTimeout(timer);
+      clearTimeout(timer); // Stop timer until scrolling.
       timer = setTimeout(() => {
         this.alertBox.style.display = 'none';
         map.scrollZoom.disable();
