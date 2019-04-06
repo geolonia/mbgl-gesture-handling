@@ -8,7 +8,7 @@ class GestureHandling {
       backgroundColor: 'rgba(0, 0, 0, 0.8)',
       textColor: '#ffffff',
       textMessage: 'Use alt + scroll to zoom the map.',
-      timeout: 100,
+      timeout: 3000,
       ...options
     };
 
@@ -33,17 +33,21 @@ class GestureHandling {
     map.scrollZoom.disable();
 
     this.alertBox.addEventListener('wheel', () => {
-      clearTimeout(timer);
-
-      timer = setTimeout(() => {
+      if (event.altKey) {
         this.alertBox.style.display = 'none';
-        map.scrollZoom.disable();
-      }, this.settings.timeout);
+        event.preventDefault()
+      } else {
+        clearTimeout(timer);
+
+        timer = setTimeout(() => {
+          this.alertBox.style.display = 'none';
+          map.scrollZoom.disable();
+        }, this.settings.timeout);
+      }
     });
 
     map.getContainer().addEventListener('wheel', (event) => {
       if (event.altKey) {
-        this.alertBox.style.display = 'none';
         map.scrollZoom.enable();
       } else {
         const rect = map.getContainer().getBoundingClientRect();
