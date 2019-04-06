@@ -2,7 +2,7 @@
   "name": "@tilecloud/mbgl-gesture-handling",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/mbgl-gesture-handling.js",
   "scripts": {
     "start": "cd docs && http-server -o",
     "watch": "parcel -d ${TMPDIR} example/index.html --open",
