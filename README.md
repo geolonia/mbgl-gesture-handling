@@ -32,4 +32,3 @@ const options = {
 
 new GestureHandling(options).addTo(map);
 ```
-

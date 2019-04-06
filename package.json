@@ -1,6 +1,6 @@
 {
   "name": "@tilecloud/mbgl-gesture-handling",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "dist/mbgl-gesture-handling.js",
   "scripts": {
