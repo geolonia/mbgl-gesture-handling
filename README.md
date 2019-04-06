@@ -13,11 +13,11 @@ https://tilecloud.github.io/mbgl-gesture-handling/
 
 ## How to use
 
-```
+```bash
 $ npm install @tilecloud/mbgl-gesture-handling
 ```
 
-```
+```node
 import GestureHandling from '@tilecloud/mbgl-gesture-handling'
 
 const map = new mapboxgl.Map({
