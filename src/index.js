@@ -51,7 +51,7 @@ class GestureHandling {
   addTo(map) {
     map.scrollZoom.disable();
 
-    this.helpElement.addEventListener('wheel', () => {
+    this.helpElement.addEventListener('wheel', (event) => {
       if (event.altKey) {
         this.helpElement.style.display = 'none';
         event.preventDefault()
@@ -74,8 +74,7 @@ class GestureHandling {
     });
 
     map.on('movestart', (event) => {
-      if (event.originalEvent && 'touches' in event.originalEvent && event.originalEvent.touches.length >= 2) {
-      } else if (event.originalEvent && 'touches' in event.originalEvent) {
+      if (event.originalEvent && 'touches' in event.originalEvent && 2 > event.originalEvent.touches.length) {
         this.showHelp(map, this.settings.textMessageMobile);
         map.dragPan.disable();
         timer = setTimeout(() => {
