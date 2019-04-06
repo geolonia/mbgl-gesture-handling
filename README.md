@@ -1,5 +1,9 @@
 # @tilecloud/mbgl-gesture-handling
 
+[![Build Status](https://travis-ci.org/tilecloud/mbgl-gesture-handling.svg?branch=master)](https://travis-ci.org/tilecloud/mbgl-gesture-handling)
+
+[![npm version](https://badge.fury.io/js/%40tilecloud%2Fmbgl-gesture-handling.svg)](https://badge.fury.io/js/%40tilecloud%2Fmbgl-gesture-handling)
+
 ![](https://www.evernote.com/l/ABV-KmK0NkVCQKskoYvAAFrBrepOXzi4XREB/image.png)
 
 This is a Mapbox GL JS plugin that handles wheel and touch gestures to prevent unexpected zooming and moving for the map embeded in your web site.
