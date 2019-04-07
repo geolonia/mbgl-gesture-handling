@@ -3,3 +3,11 @@ node_js:
 - stable
 - '8'
 - '10'
+deploy:
+  provider: npm
+  email: hatatatehaze@gmail.com
+  api_key:
+    secure: PjVmKP6sjiG/BKRIUttQjQr9j1fvL1oxoLV5TEO2eyNGKP9NaHvI9EcpojZ32+2VzhiR7RYcIf3uSTbz0un0iOyD2BBUKOKlufqmbpgJ4eglDteKyFJgEnATEPtO7UWc8fWzHpNVUOuDWyB0TcuD0hHrrOKS5Tc6N4zmTGeK7Uyt3+cSfeH1wSvUEH+r8K2ywb3gsQVMyLNupIbMpWHUuW5V9GAK31cEd3mJRKE8xTWNXY9/IJwFwd+GAL/SUxEwfr0oS9eRh8XzSWFRXNGm5e37g7YDHOyLeOInIZKMCOc0lbOJWEQAy9HEttEv0ZuKQBo5gVsOAkROCyc7nKKkJqJa3hAJw2PUZHjf37xxDrLvF1v9fSmTCBRVg1ER5xrSNnWuOIbvq7QyQM1riLpQFmYaANWzU4WmK+SzsSfMQFjQ4eo1YcNS2tskGp8EY9sH2LTHOEg01XPSmNnTcsdwmP9rVoB9mNa1VI6P4PhEPpMp3pzYhm1Ydn2to9W9eEsALHNgHMzSjLxSmKsBdS8q6ifMSfn/b7/URgVS5n9uF6Dr4Na+3Q46uJ5bnU8RzLl6gLPGzELzIVp4AFETWqvBBqRbaU2v4bt7Y9xM2WQtgRwXRGi2PAWX8AvXzOCuhyDFoH/3FNfen61dfdHTfxeoWqlHZ1WGC9QNVvzwt5rBEHc=
+  on:
+    tags: true
+    repo: tilecloud/mbgl-gesture-handling
