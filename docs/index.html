@@ -17,7 +17,7 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre> <h3>app.js</h3> <pre>
 import 'babel-polyfill'
-import GestureHandling from '..'
+import GestureHandling from '@tilecloud/mbgl-gesture-handling'
 
 const map = new mapboxgl.Map({
   container: 'map',
@@ -35,6 +35,7 @@ new GestureHandling().addTo(map);
 </pre> <h3>How to build</h3> We recommend to use <a href="https://parceljs.org/">Parcel</a>.
 <pre>
 $ npm install parcel
+$ npm install @tilecloud/mbgl-gesture-handling
 $ $(npm bin)/parcel build index.html
 </pre> <footer> &copy; <a href="https://tilecloud.io/">tilecloud.io</a>
 </footer> <script src="app.7197f409.js"></script>
