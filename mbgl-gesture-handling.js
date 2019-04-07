@@ -2,7 +2,8 @@
 
 class GestureHandling {
   constructor(options) {
-    this.id = 'mbgl-gesture-handling-help';
+    this.id = 'mbgl-gesture-handling-help' + GestureHandling.count;
+    GestureHandling.count++;
     this.timer = null;
 
     this.settings = {
@@ -97,5 +98,7 @@ class GestureHandling {
     });
   }
 }
+
+GestureHandling.count = 0 // static
 
 export default GestureHandling;
