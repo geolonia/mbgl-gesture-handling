@@ -2,7 +2,7 @@
 
 class GestureHandling {
   constructor(options) {
-    this.id = 'mbgl-gesture-handling-help' + GestureHandling.count;
+    this.id = `mbgl-gesture-handling-help-container-${GestureHandling.count}`;
     GestureHandling.count++;
     this.timer = null;
 
