@@ -58,10 +58,11 @@ $ npm test
 $ npm run build
 ```
 
-Developers note:
+### Note for developers
 
 To publish this module:
 
 ```
-$ npm run build && npm publish
+$ npm tag x.x.x
+$ git push origin x.x.x
 ```
