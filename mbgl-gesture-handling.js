@@ -65,7 +65,7 @@ class GestureHandling {
     });
 
     map.on('zoomstart', (event) => {
-      if (! event.originalEvent || ! event.originalEvent.altKey) {
+      if ( event.originalEvent && 'wheel' === event.originalEvent.type && ! event.originalEvent.altKey) {
         this.showHelp(map, this.settings.textMessage);
         this.timer = setTimeout(() => {
           this.hideHelp();
