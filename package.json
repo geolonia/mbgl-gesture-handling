@@ -8,7 +8,7 @@
     "watch": "parcel -d ${TMPDIR} example/index.html --open",
     "build": "npm run build:site",
     "build:site": "rm -fr docs && parcel build -d docs example/index.html --public-url '.' && touch docs/.nojekyll",
-    "test": "eslint \"src/**/*.js\""
+    "test": "eslint \"mbgl-gesture-handling.js\""
   },
   "repository": {
     "type": "git",
