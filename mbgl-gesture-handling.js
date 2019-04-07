@@ -53,27 +53,23 @@ class GestureHandling {
   }
 
   addTo(map) {
-    map.scrollZoom.disable();
-
     this.helpElement.addEventListener('wheel', (event) => {
       if (event.altKey) {
         this.hideHelp();
-        event.preventDefault();
       } else {
         clearTimeout(this.timer);
-
         this.timer = setTimeout(() => {
           this.hideHelp();
-          map.scrollZoom.disable();
         }, this.settings.timeout);
       }
     });
 
-    map.getContainer().addEventListener('wheel', (event) => {
-      if (event.altKey) {
-        map.scrollZoom.enable();
-      } else {
+    map.on('zoomstart', (event) => {
+      if (! event.originalEvent || ! event.originalEvent.altKey) {
         this.showHelp(map, this.settings.textMessage);
+        this.timer = setTimeout(() => {
+          this.hideHelp();
+        }, this.settings.timeout);
       }
     });
 
