@@ -57,6 +57,7 @@ class GestureHandling {
 
     this.helpElement.addEventListener('wheel', (event) => {
       if (event.altKey) {
+        event.preventDefault()
         this.hideHelp();
       } else {
         clearTimeout(this.timer);
@@ -68,6 +69,7 @@ class GestureHandling {
 
     map.getContainer().addEventListener('wheel', (event) => {
       if (event.altKey) {
+        event.preventDefault()
         if (! map.scrollZoom.isEnabled()) {
           map.scrollZoom.enable();
         }
