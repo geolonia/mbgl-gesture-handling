@@ -11,7 +11,7 @@ class GestureHandling {
       textColor: '#ffffff',
       textMessage: 'Use alt + scroll to zoom the map.',
       textMessageMobile: 'Use two fingers to move the map.',
-      timeout: 3000,
+      timeout: 2000,
       ...options
     };
 
