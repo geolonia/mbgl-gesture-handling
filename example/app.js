@@ -13,6 +13,7 @@ const map = new mapboxgl.Map({
   interactive: true
 });
 
+map.addControl(new mapboxgl.FullscreenControl());
 map.addControl(new mapboxgl.NavigationControl());
 map.addControl(new mapboxgl.GeolocateControl());
 map.addControl(new TileCloudControl());
