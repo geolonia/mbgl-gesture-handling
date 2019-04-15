@@ -5,10 +5,9 @@
   "main": "mbgl-gesture-handling.js",
   "scripts": {
     "start": "parcel -d ${TMPDIR} example/index.html --open",
-    "build": "npm run build:lib && npm run build:docs",
-    "build:lib": "npm test && microbundle build src/mbgl-gesture-handling.js -o dist -f cjs",
-    "build:docs": "rm -fr docs && parcel build -d docs example/index.html --public-url '.' && touch docs/.nojekyll",
-    "test": "eslint \"src/mbgl-gesture-handling.js\""
+    "build": "npm run build:site",
+    "build:site": "rm -fr docs && parcel build -d docs example/index.html --public-url '.' && touch docs/.nojekyll",
+    "test": "eslint \"mbgl-gesture-handling.js\""
   },
   "repository": {
     "type": "git",
@@ -17,14 +16,11 @@
   "author": "tilecloud.io",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/plugin-transform-classes": "^7.4.3",
     "@tilecloud/mbgl-fork-me-control": "^0.2.5",
     "@tilecloud/mbgl-tilecloud-control": "^0.3.6",
     "babel-polyfill": "^6.26.0",
     "eslint": "^5.16.0",
     "http-server": "^0.11.1",
-    "microbundle": "^0.11.0",
     "parcel-bundler": "^1.12.3"
   }
 }
