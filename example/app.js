@@ -2,7 +2,7 @@ import 'babel-polyfill'
 
 import TileCloudControl from '@tilecloud/mbgl-tilecloud-control'
 import ForkMeConntrol from '@tilecloud/mbgl-fork-me-control'
-import GestureHandling from '..'
+import GestureHandling from '../src/mbgl-gesture-handling'
 
 const map = new mapboxgl.Map({
   container: 'map',
