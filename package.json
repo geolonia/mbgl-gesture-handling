@@ -2,7 +2,7 @@
   "name": "@tilecloud/mbgl-gesture-handling",
   "version": "1.0.9",
   "description": "This is a Mapbox GL JS plugin that handles wheel and touch gestures to prevent unexpected zooming and moving for the map embeded in your web site.",
-  "main": "dist/mbgl-gesture-handling.js",
+  "main": "mbgl-gesture-handling.js",
   "scripts": {
     "start": "parcel -d ${TMPDIR} example/index.html --open",
     "build": "npm run build:lib && npm run build:docs",
