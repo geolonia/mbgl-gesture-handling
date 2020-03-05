@@ -1,7 +1,7 @@
-# @tilecloud/mbgl-gesture-handling
+# @geolonia/mbgl-gesture-handling
 
-[![Build Status](https://travis-ci.org/tilecloud/mbgl-gesture-handling.svg?branch=master)](https://travis-ci.org/tilecloud/mbgl-gesture-handling)
-[![npm version](https://badge.fury.io/js/%40tilecloud%2Fmbgl-gesture-handling.svg)](https://badge.fury.io/js/%40tilecloud%2Fmbgl-gesture-handling)
+[![Build Status](https://travis-ci.org/geolonia/mbgl-gesture-handling.svg?branch=master)](https://travis-ci.org/geolonia/mbgl-gesture-handling)
+[![npm version](https://badge.fury.io/js/%40geolonia%2Fmbgl-gesture-handling.svg)](https://badge.fury.io/js/%40geolonia%2Fmbgl-gesture-handling)
 
 This is a Mapbox GL JS plugin that handles wheel and touch gestures to prevent unexpected zooming and moving for the map embeded in your web site.
 
@@ -21,16 +21,16 @@ Users need to use two fingers to move the map.
 
 ## Demo
 
-https://tilecloud.github.io/mbgl-gesture-handling/
+https://geolonia.github.io/mbgl-gesture-handling/
 
 ## How to use
 
 ```bash
-$ npm install @tilecloud/mbgl-gesture-handling
+$ npm install @geolonia/mbgl-gesture-handling
 ```
 
 ```node
-import GestureHandling from '@tilecloud/mbgl-gesture-handling'
+import GestureHandling from '@geolonia/mbgl-gesture-handling'
 
 const map = new mapboxgl.Map({
   ...
@@ -51,7 +51,7 @@ new GestureHandling(options).addTo(map);
 ## Contributing
 
 ```bash
-$ git clone git@github.com:tilecloud/mbgl-gesture-handling.git
+$ git clone git@github.com:geolonia/mbgl-gesture-handling.git
 $ cd mbgl-gesture-handling
 $ npm install
 $ npm test

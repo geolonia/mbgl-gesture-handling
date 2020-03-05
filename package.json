@@ -1,5 +1,5 @@
 {
-  "name": "@tilecloud/mbgl-gesture-handling",
+  "name": "@geolonia/mbgl-gesture-handling",
   "version": "1.0.9",
   "description": "This is a Mapbox GL JS plugin that handles wheel and touch gestures to prevent unexpected zooming and moving for the map embeded in your web site.",
   "main": "mbgl-gesture-handling.js",
@@ -11,16 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tilecloud/mbgl-gesture-handling.git"
+    "url": "git+https://github.com/geolonia/mbgl-gesture-handling.git"
   },
-  "author": "tilecloud.io",
+  "author": "geolonia.com",
   "license": "MIT",
   "devDependencies": {
-    "@tilecloud/mbgl-fork-me-control": "^0.2.5",
-    "@tilecloud/mbgl-tilecloud-control": "^0.3.6",
+    "@geolonia/mbgl-fork-me-control": "^0.2.7",
+    "@geolonia/mbgl-geolonia-control": "^0.3.8",
     "babel-polyfill": "^6.26.0",
-    "eslint": "^5.16.0",
-    "http-server": "^0.11.1",
-    "parcel-bundler": "^1.12.3"
+    "eslint": "^6.8.0",
+    "http-server": "^0.12.1",
+    "parcel-bundler": "^1.12.4"
   }
 }

@@ -1,15 +1,15 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"><title>Example: @tilecloud/mbgl-japanese-prefs</title><link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css" rel="stylesheet"><script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js"></script><style>body{width:90%;margin:8px auto}#map,#map2{width:100%;height:300px}pre{background-color:#f5f5f5;border:1px solid #dedede;padding:16px}footer{border-top:1px solid #dedede;margin-top:40px;text-align:center}</style></head><body> <h1>@tilecloud/mbgl-gesture-handling</h1> <p><a href="https://github.com/tilecloud/mbgl-gesture-handling">https://github.com/tilecloud/mbgl-gesture-handling</a></p> <div id="map"></div> <h2>Example</h2> <h3>index.html</h3> <pre><code>&lt;!doctype html&gt;
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"><title>Example: @geolonia/mbgl-gesture-handling</title><link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet"><script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script><style>body{width:90%;margin:8px auto}#map,#map2{width:100%;height:300px}pre{background-color:#f5f5f5;border:1px solid #dedede;padding:16px}footer{border-top:1px solid #dedede;margin-top:40px;text-align:center}</style></head><body> <h1>@geolonia/mbgl-gesture-handling</h1> <p><a href="https://github.com/geolonia/mbgl-gesture-handling">https://github.com/geolonia/mbgl-gesture-handling</a></p> <div id="map"></div> <h2>Example</h2> <h3>index.html</h3> <pre><code>&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=&quot;UTF-8&quot;&gt;
   &lt;meta name=&#039;viewport&#039; content=&#039;initial-scale=1,maximum-scale=1,user-scalable=no&#039; /&gt;
-  &lt;title&gt;Example: @tilecloud/mbgl-japanese-prefs&lt;/title&gt;
+  &lt;title&gt;Example: @geolonia/mbgl-gesture-handling&lt;/title&gt;
   &lt;link href=&#039;https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css&#039; rel=&#039;stylesheet&#039; /&gt;
   &lt;script src=&#039;https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js&#039;&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
-&lt;h1&gt;@tilecloud/mbgl-gesture-handling&lt;/h1&gt;
+&lt;h1&gt;@geolonia/mbgl-gesture-handling&lt;/h1&gt;
 
 &lt;div id=&quot;map&quot; style=&quot;width: 100%; height: 250px;&quot;&gt;&lt;/div&gt;
 
@@ -17,11 +17,11 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre> <h3>app.js</h3> <pre>
 import 'babel-polyfill'
-import GestureHandling from '@tilecloud/mbgl-gesture-handling'
+import GestureHandling from '@geolonia/mbgl-gesture-handling'
 
 const map = new mapboxgl.Map({
   container: 'map',
-  style: 'https://tilecloud.github.io/tiny-tileserver/style.json',
+  style: 'https://geolonia.github.io/tiny-tileserver/style.json',
   attributionControl: true,
   hash: true,
   localIdeographFontFamily: "sans-serif",
@@ -35,8 +35,8 @@ new GestureHandling().addTo(map);
 </pre> <h3>How to build</h3> We recommend to use <a href="https://parceljs.org/">Parcel</a>.
 <pre>
 $ npm install parcel-bundler
-$ npm install @tilecloud/mbgl-gesture-handling
+$ npm install @geolonia/mbgl-gesture-handling
 $ $(npm bin)/parcel build index.html
-</pre> <footer> &copy; <a href="https://tilecloud.io/">tilecloud.io</a>
-</footer> <script src="app.d0ee2eb5.js"></script>
+</pre> <footer> &copy; <a href="https://geolonia.com/">geolonia.com</a>
+</footer> <script src="app.7dec5455.js"></script>
 </body></html>
