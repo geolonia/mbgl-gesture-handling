@@ -9,7 +9,7 @@ This is a Mapbox GL JS plugin that handles wheel and touch gestures to prevent u
 
 ### PC
 
-Users need to use `[alt]` + wheel to zoom them map.
+Users need to use `[alt]|[ctrl]` + wheel to zoom them map.
 
 ![](https://www.evernote.com/l/ABV-KmK0NkVCQKskoYvAAFrBrepOXzi4XREB/image.png)
 
@@ -43,6 +43,7 @@ const options = {
   textMessage: 'Use alt + scroll to zoom the map.',
   textMessageMobile: 'Use two fingers to move the map.',
   timeout: 3000,
+  modifierKey: 'alt',
 }
 
 new GestureHandling(options).addTo(map);
