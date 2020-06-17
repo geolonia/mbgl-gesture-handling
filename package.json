@@ -16,6 +16,7 @@
   "author": "geolonia.com",
   "license": "MIT",
   "devDependencies": {
+    "@babel/compat-data": "^7.10.1",
     "@geolonia/mbgl-fork-me-control": "^0.2.7",
     "@geolonia/mbgl-geolonia-control": "^0.3.8",
     "babel-polyfill": "^6.26.0",
