@@ -1,6 +1,6 @@
 {
   "name": "@geolonia/mbgl-gesture-handling",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "This is a Mapbox GL JS plugin that handles wheel and touch gestures to prevent unexpected zooming and moving for the map embeded in your web site.",
   "main": "mbgl-gesture-handling.js",
   "scripts": {
