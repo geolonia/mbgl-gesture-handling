@@ -101,6 +101,7 @@ class GestureHandling {
       if (event[this.settings.modifierKey] || true === this.fullscreen) {
         event.preventDefault()
         if (!map.scrollZoom.isEnabled()) {
+          map.scrollZoom.reset()
           map.scrollZoom.enable()
         }
       } else {
