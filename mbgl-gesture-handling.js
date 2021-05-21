@@ -23,7 +23,7 @@ class GestureHandling {
 
     const useAltKey = options.modifierKey !== 'ctrl'
 
-    let textMessage = `Use ${useAltKey ? 'Alt' : 'Ctrl'} + scroll to zoom the map.`
+    let textMessage = `Use ${useAltKey ? 'alt' : 'ctrl'} + scroll to zoom the map.`
     let textMessageMobile = 'Use two fingers to move the map.'
     const lang = (options.lang === 'auto' || !options.lang) ? getLang() : options.lang
     if ('ja' === lang) {
