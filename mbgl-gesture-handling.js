@@ -38,7 +38,7 @@ class GestureHandling {
       textMessageMobile,
       timeout: 2000,
       ...options,
-      modifierKey: useAltKey ? 'altKey' : 'ctrlKey',
+      modifierKey: useAltKey ? 'altKey' : 'ctrlKey'
     }
 
     this.helpElement = document.querySelector(`#${this.id}`)
