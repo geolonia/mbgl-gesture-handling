@@ -1,14 +1,13 @@
 language: node_js
 node_js:
-- stable
-- '8'
-- '10'
+- '12'
+- '14'
 deploy:
   provider: script
-  script: 'echo "//registry.npmjs.org/:_authToken=${API_TOKEN}" > $HOME/.npmrc && npm publish --access=public'
+  script: 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > $HOME/.npmrc && npm publish --access=public'
   on:
     tags: true
-    condition: $TRAVIS_NODE_VERSION = 10
+    condition: $TRAVIS_NODE_VERSION = 12
   skip_cleanup: true
 
 notifications:
