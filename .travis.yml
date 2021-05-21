@@ -4,7 +4,7 @@ node_js:
 - '14'
 deploy:
   provider: script
-  script: 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > $HOME/.npmrc && npm publish --access=public'
+  script: 'echo "//registry.npmjs.org/:_authToken=${API_TOKEN}" > $HOME/.npmrc && npm publish --access=public'
   on:
     tags: true
     condition: $TRAVIS_NODE_VERSION = 12
