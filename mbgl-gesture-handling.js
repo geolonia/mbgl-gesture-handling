@@ -21,14 +21,13 @@ class GestureHandling {
     GestureHandling.count++
     this.timer = null
 
-    // const useAltKey = options.modifierKey !== 'ctrl'
+    const useAltKey = options.modifierKey !== 'ctrl'
 
-    let textMessage = 'Use alt + scroll to zoom the map.'
+    let textMessage = `Use ${useAltKey ? 'Alt' : 'Ctrl'} + scroll to zoom the map.`
     let textMessageMobile = 'Use two fingers to move the map.'
     const lang = (options.lang === 'auto' || !options.lang) ? getLang() : options.lang
     if ('ja' === lang) {
-      // textMessage = `${useAltKey ? 'Alt' : 'Ctrl'} キーを押しながらスクロールしてください。`
-      textMessage = 'Alt キーを押しながらスクロールしてください。'
+      textMessage = `${useAltKey ? 'Alt' : 'Ctrl'} キーを押しながらスクロールしてください。`
       textMessageMobile = '2本指を使って操作してください。'
     }
 
@@ -39,7 +38,7 @@ class GestureHandling {
       textMessageMobile,
       timeout: 2000,
       ...options,
-      // modifierKey: useAltKey ? 'altKey' : 'ctrlKey',
+      modifierKey: useAltKey ? 'altKey' : 'ctrlKey',
     }
 
     this.helpElement = document.querySelector(`#${this.id}`)
@@ -87,8 +86,7 @@ class GestureHandling {
     map.scrollZoom.disable()
 
     this.helpElement.addEventListener('wheel', (event) => {
-      // if (event[this.settings.modifierKey] || true === this.fullscreen) {
-      if (event.altKey || true === this.fullscreen) {
+      if (event[this.settings.modifierKey] || true === this.fullscreen) {
         event.preventDefault()
         this.hideHelp(map)
       } else {
@@ -100,11 +98,10 @@ class GestureHandling {
     })
 
     map.getContainer().addEventListener('wheel', (event) => {
-      // if (event[this.settings.modifierKey] || true === this.fullscreen) {
-      if (event.altKey || true === this.fullscreen) {
+      if (event[this.settings.modifierKey] || true === this.fullscreen) {
         event.preventDefault()
         if (!map.scrollZoom.isEnabled()) {
-          // map.scrollZoom.reset()
+          map.scrollZoom.reset()
           map.scrollZoom.enable()
         }
       } else {

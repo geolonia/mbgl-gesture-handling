@@ -1,11 +1,9 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"><title>Example: @geolonia/mbgl-gesture-handling</title><link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet"><script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script><style>body{width:90%;margin:8px auto}#map,#map2{width:100%;height:300px}pre{background-color:#f5f5f5;border:1px solid #dedede;padding:16px}footer{border-top:1px solid #dedede;margin-top:40px;text-align:center}</style></head><body> <h1>@geolonia/mbgl-gesture-handling</h1> <p><a href="https://github.com/geolonia/mbgl-gesture-handling">https://github.com/geolonia/mbgl-gesture-handling</a></p> <div id="map"></div> <h2>Example</h2> <h3>index.html</h3> <pre><code>&lt;!doctype html&gt;
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"><title>Example: @geolonia/mbgl-gesture-handling</title><style>body{width:90%;margin:8px auto}#map,#map2{width:100%;height:300px}pre{background-color:#f5f5f5;border:1px solid #dedede;padding:16px;overflow-x:scroll}footer{border-top:1px solid #dedede;margin-top:40px;text-align:center}</style></head><body> <h1>@geolonia/mbgl-gesture-handling</h1> <p><a href="https://github.com/geolonia/mbgl-gesture-handling">https://github.com/geolonia/mbgl-gesture-handling</a></p> <div id="map" data-gesture-handling="off"></div> <h2>Example</h2> <h3>index.html</h3> <pre><code>&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=&quot;UTF-8&quot;&gt;
   &lt;meta name=&#039;viewport&#039; content=&#039;initial-scale=1,maximum-scale=1,user-scalable=no&#039; /&gt;
   &lt;title&gt;Example: @geolonia/mbgl-gesture-handling&lt;/title&gt;
-  &lt;link href=&#039;https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css&#039; rel=&#039;stylesheet&#039; /&gt;
-  &lt;script src=&#039;https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js&#039;&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
@@ -13,6 +11,7 @@
 
 &lt;div id=&quot;map&quot; style=&quot;width: 100%; height: 250px;&quot;&gt;&lt;/div&gt;
 
+&lt;script src=&quot;https://cdn.geolonia.com/v1/embed?geolonia-api-key=YOUR-API-KEY&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;./app.js&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre> <h3>app.js</h3> <pre>
@@ -20,7 +19,7 @@ import 'babel-polyfill'
 import GestureHandling from '@geolonia/mbgl-gesture-handling'
 
 const map = new mapboxgl.Map({
-  container: 'map',
+  container: '#map',
   style: 'https://geolonia.github.io/tiny-tileserver/style.json',
   attributionControl: true,
   hash: true,
@@ -36,4 +35,4 @@ new GestureHandling().addTo(map);
 $ npm install parcel-bundler
 $ npm install @geolonia/mbgl-gesture-handling
 $ $(npm bin)/parcel build index.html
-</pre> <footer> &copy; <a href="https://geolonia.com/">geolonia.com</a> </footer> <script src="app.5b55145a.js"></script> </body></html>
+</pre> <footer> &copy; <a href="https://geolonia.com/">geolonia.com</a> </footer> <script src="https://cdn.geolonia.com/dev/embed?geolonia-api-key=YOUR-API-KEY"></script>  <script src="https://cdn.jsdelivr.net/gh/colxi/getEventListeners/src/getEventListeners.min.js"></script> <script src="app.dffbe1d1.js"></script> </body></html>
