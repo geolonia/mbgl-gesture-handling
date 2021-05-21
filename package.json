@@ -16,12 +16,12 @@
   "author": "geolonia.com",
   "license": "MIT",
   "devDependencies": {
-    "@babel/compat-data": "^7.10.1",
+    "@babel/compat-data": "^7.14.0",
     "@geolonia/mbgl-fork-me-control": "^0.2.7",
-    "@geolonia/mbgl-geolonia-control": "^0.3.8",
+    "@geolonia/mbgl-geolonia-control": "^0.4.0",
     "babel-polyfill": "^6.26.0",
-    "eslint": "^6.8.0",
-    "http-server": "^0.12.1",
-    "parcel-bundler": "^1.12.4"
+    "eslint": "^7.26.0",
+    "http-server": "^0.12.3",
+    "parcel-bundler": "^1.12.5"
   }
 }
