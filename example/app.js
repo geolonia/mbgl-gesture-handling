@@ -16,4 +16,4 @@ map.addControl(new ForkMeConntrol({
   url: 'https://github.com/geolonia/mbgl-gesture-handling',
 }));
 
-new GestureHandling().addTo(map);
+// new GestureHandling().addTo(map);
